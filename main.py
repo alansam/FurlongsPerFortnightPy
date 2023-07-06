@@ -37,8 +37,11 @@ def main():
 
   print('\n')
 
-  print("{:14.9f} hours is {:.18f} fortnights".format(226.0, hour(226.0)))
-  print("{:14.9f} fortnights is {:.18f} hours".format(0.00297619, fortnight(0.00297619)))
+  time = 336.0
+  print("{:14.9f} hours      is {:.18f} fortnights".format(time, hour(time)))
+  time = 1.0 / 336.0
+  print("{:14.9f} fortnights is {:.18f} hours".format(time, fortnight(time)))
+
   print("{:14.9f} miles per hour is {:.18f} furlongs per hour".format(1., fph(1.)))
 
   print('\n')
