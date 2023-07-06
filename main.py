@@ -1,20 +1,42 @@
 '''
    @see: https://en.wikipedia.org/wiki/FFF_system#Furlongs_per_fortnight
 '''
+
+'''
+....+....|....+....|....+....|....+....|....+....|....+....|....+....|
+  Lambdas:
+'''
+
+# furlongs to miles
+furlong   = lambda fur : fur / 8.0
+# miles to furlongs
+mile      = lambda mil : mil * 8.0
+# weeks to hours
+week      = lambda wk  : wk * 7.0 * 24.0
+# fortnights to hours
+fortnight = lambda fnt : fnt * 7.0 * 24.0 * 2.0
+# hours to fortnights
+hour      = lambda hr  : hr / 7.0 / 24.0 / 2.0
+# fortnights per hour
+fph       = lambda mil : mil * mile(1.0)
+# fortnights per fortnight
+fpf       = lambda mph : fph(mph) * fortnight(1.0)
+
+
+# furlongs per fortnight to MPH
+fpf2mph   = lambda fpf : fpf * 3.720 * 10**-4
+# furlongs per fortnight to km/h
+fpf2kmph  = lambda fpf : fpf * 5.987 * 10**-4
+# MPH to furlongs per fortnight
+mph2fpf   = lambda fpf : fpf / (3.720 * 10**-4)
+# km/h to furlongs per fortnight
+kmph2fpf  = lambda fpf : fpf / (5.987 * 10**-4)
+
+'''
+....+....|....+....|....+....|....+....|....+....|....+....|....+....|
+  main():
+'''
 def main():
-  furlong   = lambda fur : fur / 8.0
-  mile      = lambda mil : mil * 8.0
-  week      = lambda wk  : wk * 7.0 * 24.0
-  fortnight = lambda fnt : fnt * 7.0 * 24.0 * 2.0
-  hour      = lambda hr  : hr / 7.0 / 24.0 / 2.0
-  fph       = lambda mil : mil * mile(1.0)
-  fpf       = lambda mph : fph(mph) * fortnight(1.0)
-
-  fpf2mph   = lambda fpf : fpf * 3.720 * 10**-4
-  fpf2kmph  = lambda fpf : fpf * 5.987 * 10**-4
-  mph2fpf   = lambda fpf : fpf / (3.720 * 10**-4)
-  kmph2fpf  = lambda fpf : fpf / (5.987 * 10**-4)
-
   fur = 8.0
   mil = 1.0
   fnt = 1.0
