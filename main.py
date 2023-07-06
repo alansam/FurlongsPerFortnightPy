@@ -11,9 +11,9 @@ def main():
   fpf       = lambda mph : fph(mph) * fortnight(1.0)
 
   fpf2mph   = lambda fpf : fpf * 3.720 * 10**-4
-  fpf2kph   = lambda fpf : fpf * 5.987 * 10**-4
+  fpf2kmph  = lambda fpf : fpf * 5.987 * 10**-4
   mph2fpf   = lambda fpf : fpf / (3.720 * 10**-4)
-  kph2fpf   = lambda fpf : fpf / (5.987 * 10**-4)
+  kmph2fpf  = lambda fpf : fpf / (5.987 * 10**-4)
 
   fur = 8.0
   mil = 1.0
@@ -53,8 +53,8 @@ def main():
 
   p1f2k = 1.0
   p2f2k = 1670.28561884
-  print("{:14.9f} furlongs per fortnight is {:14.9f} km/h".format(p1f2k, fpf2kph(p1f2k)))
-  print("{:14.9f} furlongs per fortnight is {:14.9f} km/h".format(p2f2k, fpf2kph(p2f2k)))
+  print("{:14.9f} furlongs per fortnight is {:14.9f} km/h".format(p1f2k, fpf2kmph(p1f2k)))
+  print("{:14.9f} furlongs per fortnight is {:14.9f} km/h".format(p2f2k, fpf2kmph(p2f2k)))
 
   print('\n')
 
@@ -65,8 +65,8 @@ def main():
   print("{:14.9f} MPH  is {:14.9f} furlongs per fortnight".format(p2m2f, mph2fpf(p2m2f)))
   print("{:14.9f} MPH  is {:14.9f} furlongs per fortnight".format(p4m2f, mph2fpf(p4m2f)))
 
-  print("{:14.9f} km/h is {:14.9f} furlongs per fortnight".format(p3k2f, kph2fpf(p3k2f)))
-  print("{:14.9f} km/h is {:14.9f} furlongs per fortnight".format(p4k2f, kph2fpf(p4k2f)))
+  print("{:14.9f} km/h is {:14.9f} furlongs per fortnight".format(p3k2f, kmph2fpf(p3k2f)))
+  print("{:14.9f} km/h is {:14.9f} furlongs per fortnight".format(p4k2f, kmph2fpf(p4k2f)))
 
 '''
 ....+....|....+....|....+....|....+....|....+....|....+....|....+....|
