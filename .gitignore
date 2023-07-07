@@ -20,3 +20,4 @@ replit.nix
 /.cache
 /.ccls-cache
 .breakpoints
+/venv
